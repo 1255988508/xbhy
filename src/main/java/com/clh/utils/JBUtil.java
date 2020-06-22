@@ -24,7 +24,7 @@ public class JBUtil {
         }
     }
 
-    public DruidDataSource getDruidDataSource() {
+    public static DruidDataSource getDruidDataSource() {
         return druidDataSource;
     }
 }
