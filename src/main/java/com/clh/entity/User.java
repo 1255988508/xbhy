@@ -13,8 +13,8 @@ public class User implements Serializable {
   private String realName;
   private Long age;
   private String phone;
-  private String gender;
-  private String desc;
+  private Integer sex;
+  private String description;
   private String registerTime;
   private String loginTime;
   private String pic;
@@ -23,6 +23,8 @@ public class User implements Serializable {
   private String deptName;
   private Long deptId;
 
+  public User() {
+  }
 
   public Long getId() {
     return id;
@@ -96,20 +98,20 @@ public class User implements Serializable {
     this.phone = phone;
   }
 
-  public String getGender() {
-    return gender;
+  public Integer getSex() {
+    return sex;
   }
 
-  public void setGender(String gender) {
-    this.gender = gender;
+  public void setSex(Integer sex) {
+    this.sex = sex;
   }
 
-  public String getDesc() {
-    return desc;
+  public String getDescription() {
+    return description;
   }
 
-  public void setDesc(String desc) {
-    this.desc = desc;
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   public String getRegisterTime() {

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=utf-8" language="java" %>
 <html>
 <head></head>
-<script src="/static/js/jquery-3.5.0.js"></script>
+<%--<script src="/static/js/jquery-3.5.0.js"></script>--%>
 <script>
     window.onload = function (ev) {
         $.ajax({

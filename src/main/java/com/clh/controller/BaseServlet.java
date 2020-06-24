@@ -19,12 +19,11 @@ public class BaseServlet extends HttpServlet {
         String uri = req.getRequestURI();
         String[] uriArr=uri.split("/");
         String method=uriArr[uriArr.length-1];
-        User2Servlet userServlet = new User2Servlet();
-        Class clazz=userServlet.getClass();
+        Class clazz=this.getClass();
         try {
-            Method useMethod=clazz.getMethod("list",HttpServletRequest.class,HttpServletResponse.class);
+            Method useMethod=clazz.getMethod(method,HttpServletRequest.class,HttpServletResponse.class);
             useMethod.setAccessible(true);
-            useMethod.invoke(userServlet,req,resp);
+            useMethod.invoke(this,req,resp);
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {

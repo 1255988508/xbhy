@@ -23,6 +23,7 @@
         border: 1px solid gray;
         float: left;
         margin-left: 1%;
+        overflow: auto;
     }
     ul{
         list-style-type: none;
